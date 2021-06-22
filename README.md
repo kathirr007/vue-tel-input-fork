@@ -1,8 +1,6 @@
-# vue-tel-input
+# vue-tel-input-fork
 
 International Telephone Input with Vue.
-
-[![](https://img.shields.io/npm/dt/vue-tel-input.svg)](https://www.npmjs.com/package/vue-tel-input) [![](https://img.shields.io/github/stars/iamstevendao/vue-tel-input.svg)](https://github.com/iamstevendao/vue-tel-input)
 
 <p align="center">
 <img width="600px" alt="In-action GIF" src="https://thumbs.gfycat.com/EducatedPoliteBluefintuna-size_restricted.gif"/>
@@ -10,37 +8,37 @@ International Telephone Input with Vue.
 
 ## Documentation and live demo
 
-[Visit the website](https://iamstevendao.github.io/vue-tel-input/)
+[Visit the website](https://kathirr007.github.io/vue-tel-input-fork/)
 
 ### Vue 3 Support
 
-`vue-tel-input@next`: [Guide](https://iamstevendao.github.io/vue-tel-input/documentation/next.html)
+`vue-tel-input-fork@next`: [Guide](https://kathirr007.github.io/vue-tel-input-fork/documentation/next.html)
 
 ## Getting started
 
 - Install the plugin:
 
   ```sh
-  npm install vue-tel-input
+  npm install vue-tel-input-fork
   ```
 
 - Add the plugin into your app:
 
   ```javascript
-  import Vue from 'vue';
-  import VueTelInput from 'vue-tel-input';
-  import 'vue-tel-input/dist/vue-tel-input.css';
+  import Vue from "vue";
+  import VueTelInput from "vue-tel-input-fork";
+  import "vue-tel-input-fork/dist/vue-tel-input-fork.css";
 
   Vue.use(VueTelInput);
   ```
 
   [More info on installation](#installation)
 
-- Use the `vue-tel-input` component:
+- Use the `vue-tel-input-fork` component:
 
   ```html
   <template>
-    <vue-tel-input v-model="phone"></vue-tel-input>
+    <vue-tel-input v-model="phone"></vue-tel-input-fork>
   </template>
   ```
 
@@ -49,30 +47,30 @@ International Telephone Input with Vue.
 ### npm
 
 ```bash
-  npm install vue-tel-input
+  npm install vue-tel-input-fork
 ```
 
 Install the plugin into Vue:
 
 ```javascript
-import Vue from 'vue';
-import VueTelInput from 'vue-tel-input';
-import 'vue-tel-input/dist/vue-tel-input.css';
+import Vue from "vue";
+import VueTelInput from "vue-tel-input-fork";
+import "vue-tel-input-fork/dist/vue-tel-input-fork.css";
 
 Vue.use(VueTelInput, options); // Define default global options here (optional)
 ```
 
-> View all available options in [Props](https://iamstevendao.github.io/vue-tel-input/documentation/props.html).
+> View all available options in [Props](https://kathirr007.github.io/vue-tel-input-fork/documentation/props.html).
 
 Or use the component directly:
 
 ```html
 <!-- your-component.vue-->
 <template>
-  <vue-tel-input v-model="value"></vue-tel-input>
+  <vue-tel-input v-model="value"></vue-tel-input-fork>
 </template>
 <script>
-  import { VueTelInput } from 'vue-tel-input';
+  import { VueTelInput } from 'vue-tel-input-fork';
 
   export default {
     components: {
@@ -80,15 +78,18 @@ Or use the component directly:
     },
   };
 
-  <style src="vue-tel-input/dist/vue-tel-input.css"></style>;
+  <style src="vue-tel-input-fork/dist/vue-tel-input-fork.css"></style>;
 </script>
 ```
 
 ### Browser
 
 ```html
-<script src="https://unpkg.com/vue-tel-input"></script>
-<link rel="stylesheet" href="https://unpkg.com/vue-tel-input/dist/vue-tel-input.css" />
+<script src="https://unpkg.com/vue-tel-input-fork"></script>
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/vue-tel-input-fork/dist/vue-tel-input-fork.css"
+/>
 ```
 
 ** If Vue is detected in the Page, the plugin is installed automatically.**
@@ -96,7 +97,7 @@ Or use the component directly:
 \*\* Otherwise, manually install the plugin into Vue:
 
 ```js
-Vue.use(window['vue-tel-input']);
+Vue.use(window["vue-tel-input-fork"]);
 ```
 
 ### Use as a custom field of [vue-form-generator](https://github.com/vue-generators/vue-form-generator)
@@ -106,7 +107,7 @@ Vue.use(window['vue-tel-input']);
   ```html
   <!-- tel-input.vue -->
   <template>
-    <vue-tel-input v-model="value"></vue-tel-input>
+    <vue-tel-input v-model="value"></vue-tel-input-fork>
   </template>
 
   <script>
@@ -122,10 +123,10 @@ Vue.use(window['vue-tel-input']);
 - Register the new field as a global component
 
   ```js
-  import Vue from 'vue';
-  import TelInput from '<path>/tel-input.vue';
+  import Vue from "vue";
+  import TelInput from "<path>/tel-input.vue";
 
-  Vue.component('field-tel-input', TelInput);
+  Vue.component("field-tel-input", TelInput);
   ```
 
 - Now it can be used as `tel-input` in schema of `vue-form-generator`
@@ -134,10 +135,10 @@ Vue.use(window['vue-tel-input']);
   var schema: {
     fields: [
       {
-        type: 'tel-input',
-        label: 'Awesome (tel input)',
-        model: 'telephone',
-      },
+        type: "tel-input",
+        label: "Awesome (tel input)",
+        model: "telephone",
+      }
     ],
   };
   ```
@@ -151,13 +152,13 @@ Since the library is about 200kb of JavaScript and 100kb of CSS in order to impr
 ```html
 <!-- your-component.vue-->
 <template>
-  <vue-tel-input v-model="value"></vue-tel-input>
+  <vue-tel-input v-model="value"></vue-tel-input-fork>
 </template>
 <script>
   const VueTelInput = () =>
     Promise.all([
-      import(/* webpackChunkName: "chunk-vue-tel-input" */ 'vue-tel-input'),
-      import(/* webpackChunkName: "chunk-vue-tel-input" */ 'vue-tel-input/dist/vue-tel-input.css'),
+      import(/* webpackChunkName: "chunk-vue-tel-input-fork" */ 'vue-tel-input-fork'),
+      import(/* webpackChunkName: "chunk-vue-tel-input-fork" */ 'vue-tel-input-fork/dist/vue-tel-input-fork.css'),
     ]).then(([{ VueTelInput }]) => VueTelInput);
 
   export default {
@@ -172,11 +173,11 @@ As you see, we do use Vue SFC `<style></style>` tag here to import component's c
 
 ## Changelog
 
-[Go to Github Releases](https://github.com/iamstevendao/vue-tel-input/releases)
+[Go to Github Releases](https://github.com/kathirr007/vue-tel-input-fork/releases)
 
 ## License
 
-Copyright (c) 2018 Steven Dao.
-Released under the [MIT License](https://github.com/iamstevendao/vue-tel-input/blob/master/LICENSE).
+Copyright (c) 2021 Kathirr007.
+Released under the [MIT License](https://github.com/kathirr007/vue-tel-input-fork/blob/master/LICENSE).
 
-made with &#x2764; by [Steven](https://github.com/iamstevendao).
+forked with &#x2764; by [Kathirr007](https://github.com/kathirr007).
