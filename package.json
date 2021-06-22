@@ -1,6 +1,6 @@
 {
   "name": "vue-tel-input-fork",
-  "version": "5.4.1",
+  "version": "5.4.2",
   "description": "International Telephone Input with Vue",
   "author": "Steven Dao <iamstevendao@gmail.com>",
   "license": "MIT",
@@ -17,11 +17,13 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "lint:fix": "vue-cli-service lint --fix",
-    "prepublishOnly": "npm run build && npm run build:modern"
+    "prepublishOnly": "npm run build && npm run build:modern",
+    "postinstall": "cd docs && npm ci --prefer-offline"
   },
   "files": [
     "dist/",
-    "dist-modern/"
+    "dist-modern/",
+    "docs/"
   ],
   "main": "dist/vue-tel-input.umd.min.js",
   "unpkg": "dist/vue-tel-input.umd.min.js",
