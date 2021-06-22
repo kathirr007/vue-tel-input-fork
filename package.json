@@ -17,11 +17,13 @@
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "lint:fix": "vue-cli-service lint --fix",
-    "prepublishOnly": "npm run build && npm run build:modern"
+    "prepublishOnly": "npm run build && npm run build:modern && rm -rf docs/node_modules",
+    "postinstall": "cd docs && npm i"
   },
   "files": [
     "dist/",
-    "dist-modern/"
+    "dist-modern/",
+    "docs/"
   ],
   "main": "dist/vue-tel-input-fork.umd.min.js",
   "unpkg": "dist/vue-tel-input-fork.umd.min.js",
