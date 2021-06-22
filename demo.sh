@@ -19,6 +19,6 @@ git init
 git add -A
 git commit -m "Deploy"
 
-git push -f git@github.com:iamstevendao/vue-tel-input.git master:gh-pages
+git push -f git@github.com:kathirr007/vue-tel-input-fork.git master:gh-pages
 
 cd -
